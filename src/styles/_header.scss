@@ -1,0 +1,107 @@
+.header {
+  position: absolute;
+  top: 0;
+  left:0;
+  right: 0;
+  z-index: 1;
+  color: #fff;
+  padding-top: 40px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  &-logo {
+    display: flex;
+    align-items: center;
+    font-family: raleway, sans-serif;
+    font-size: 34px;
+    transition: color .3s;
+
+    svg {
+      fill: #fff;
+      transition: fill .3s;
+    }
+
+    &:hover {
+      color: $primary-font-color;
+      svg {
+        fill: $primary-font-color;
+      }
+    }
+    &:active {
+      color: darken($primary-font-color, 10%);
+      svg {
+        fill: darken($primary-font-color, 10%);
+      }
+    }
+  }
+
+  &-nav {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    a {
+      display: inline-block;
+      margin-left: 30px;
+      font-weight: 300;
+      font-size: 14px;
+      transition: color .3s;
+
+
+      &:hover {
+        color: $primary-font-color;
+      }
+      &:active {
+        color: darken($primary-font-color, 10%);
+      }
+    }
+  }
+
+  .icon-search,
+  .icon-cart {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+
+    svg {
+      fill: #fff;
+      transition: fill .3s;
+
+      &:hover {
+        fill: $primary-font-color;
+      }
+      &:active {
+        fill: darken($primary-font-color, 10%);
+      }
+    }
+  }
+
+  .icon-cart {
+    margin: 0 24px 0 60px;
+  }
+
+  .icon-search {
+    background: transparent;
+    border: 0;
+    cursor: pointer
+  }
+
+}
+
+.top-search {
+  line-height: 1;
+  position: relative;
+
+  &-text-field {
+    display: none;
+  }
+}

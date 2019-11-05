@@ -31,7 +31,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpe?g|gif|mp4)$/i,
+        test: /\.(png|jpe?g|gif|svg)$/i,
         loader: 'file-loader',
         options: {
           name(file) {
@@ -41,6 +41,12 @@ module.exports = {
             return '[path][name].[ext]';
           },
         },
+      },
+      {
+         test: /\.(woff|woff2|eot|ttf|otf)$/,
+         use: [
+           'file-loader',
+         ],
       },
     ]
   },
@@ -53,7 +59,7 @@ module.exports = {
     })
   ],
   devServer: {
-    contentBase: '/',
+    contentBase: 'src',
     port: 7000,
   }
 }
