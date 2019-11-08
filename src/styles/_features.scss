@@ -10,6 +10,11 @@
 .service-item {
   text-align: center;
   position: relative;
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   &:after {
     content: '';
