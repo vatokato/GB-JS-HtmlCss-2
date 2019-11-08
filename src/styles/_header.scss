@@ -102,6 +102,26 @@
   position: relative;
 
   &-text-field {
-    display: none;
+    position: absolute;
+    display: block;
+    opacity: 0;
+    width: 0;
+    right: 0;
+    bottom: -50px;
+    transition: opacity .3s, width .3s, padding .3s;
+    border: 0;
+    background: #ffffffcc;
+    outline: none;
+    padding: 0;
+    font-size: 14px;
+    height: 40px;
+    border-bottom: 4px solid $primary-color;
+    border-radius: 4px;
+
+    &:focus {
+      opacity: 1;
+      width: 200px;
+      padding: 0 10px;
+    }
   }
 }

@@ -1,0 +1,59 @@
+.service {
+  margin: 0 0 80px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+.service-item {
+  text-align: center;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -35px;
+    height: 3px;
+    width: 70px;
+    background: #f1eee9;
+    transition: background-color .3s;
+  }
+
+  svg {
+    height: 50px;
+    fill: #565656;
+    transition: fill .3s;
+    margin: 0 0 15px;
+  }
+
+  .service-title {
+    color: #555;
+    margin: 0 0 15px;
+    font-weight: 600;
+    font-family: $font-raleway;
+  }
+
+  .service-text {
+    margin: 0 0 30px;
+    color: #8c8c8c;
+    font-weight: 300;
+    transition: color .3s;
+    font-size: 14px;
+  }
+
+  &:hover {
+    .service-title {
+      color: $primary-font-color
+    }
+    svg {
+      fill: $primary-font-color;
+    }
+    &:after {
+      background: $primary-font-color;
+    }
+  }
+}
