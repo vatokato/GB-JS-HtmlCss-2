@@ -1,0 +1,31 @@
+.projects {
+  padding: 80px 0;
+
+  .container {
+  }
+
+  .projects-text {
+    max-width: 780px;
+    margin: 0 auto 30px;
+    text-align: center;
+  }
+
+  &-title {
+    font-family: $font-raleway;
+    font-size: 30px;
+    color: $grey-default;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  &-sub-title {
+    color: #615855;
+    font-weight: 300;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .button-container {
+    text-align: center;
+  }
+}

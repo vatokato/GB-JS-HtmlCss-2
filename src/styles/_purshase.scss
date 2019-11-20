@@ -1,0 +1,40 @@
+.purshase {
+  background: rgb(33,27,25);
+  background: linear-gradient(90deg, rgba(33,27,25,1) 0%, rgba(78,52,39,1) 100%);
+
+  .container {
+    min-height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-text {
+    margin: 30px 20px 30px 0;
+  }
+
+  &-title {
+    font-family: $font-raleway;
+    font-size: 28px;
+    color: #fff;
+    margin: 0;
+
+    .accent {
+      color: $primary-font-color;
+    }
+  }
+  &-sub-title {
+    color: #615855;
+    font-weight: 300;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column;
+      padding-bottom: 30px;
+    }
+  }
+}

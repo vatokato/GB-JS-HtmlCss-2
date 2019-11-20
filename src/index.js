@@ -1,3 +1,43 @@
 import './styles/index.scss';
 
-console.log('start');
+const slides = document.querySelectorAll('.slider-item');
+const count = slides.length;
+const control = {
+  left: {classCurr:'null-to-left', classNext:'right-to-null', inc: -1},
+  right: {classCurr:'null-to-right', classNext:'left-to-null', inc: 1},
+};
+let currentIndex = 0;
+document.addEventListener('click', e=>{
+  const t = e.target;
+  if(t.dataset.name=="slider-control" || t.name=="slider-control") {
+    let nextIndex = t.value || getNextIndex(
+      currentIndex+control[t.dataset.direct].inc,
+      count
+    );
+    if(nextIndex == currentIndex) return;
+    let controlItem = nextIndex > currentIndex ? control.left : control.right;
+    clearSlide(slides[currentIndex]);
+    clearSlide(slides[nextIndex]);
+    slides[currentIndex].classList.add(controlItem.classCurr);
+    slides[nextIndex].classList.add(controlItem.classNext);
+    currentIndex = parseInt(nextIndex);
+    document.querySelector(`input[name='slider-control'][value='${currentIndex}']`).checked=true;
+  }
+});
+const clearSlide = slide => slide.classList.remove('right-to-null', 'left-to-null', 'null-to-left', 'null-to-right');
+const getNextIndex = (index, count) => index < 0 ? count-1 : index%count;
+
+
+const videoContainer =  document.querySelector('.video-block');
+const video = document.querySelector('.video-block video');
+const videoButton = document.querySelector('.video-block__play');
+videoButton.addEventListener('click', ()=>{
+  video.play();
+  video.setAttribute("controls","controls");
+  videoContainer.classList.add('playing');
+});
+video.addEventListener('ended', ()=>{
+  video.load();
+  videoContainer.classList.remove('playing');
+  video.removeAttribute("controls");
+});

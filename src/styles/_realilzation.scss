@@ -1,0 +1,22 @@
+.realization {
+  padding: 80px 0 510px;
+  background: #fbfaf8 url(../img/realization-bg.jpg) no-repeat center bottom;
+
+  .container {
+    max-width: 780px;
+    text-align: center;
+  }
+
+  &-title {
+    font-family: $font-raleway;
+    font-size: 30px;
+    font-weight: 600;
+    color: $grey-default;
+    margin-bottom: 16px;
+  }
+  &-sub-title {
+    font-size: 16px;
+    font-weight: 300;
+    color: $grey-light;
+  }
+}
