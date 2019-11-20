@@ -14,7 +14,6 @@ document.addEventListener('click', e=>{
       currentIndex+control[t.dataset.direct].inc,
       count
     );
-
     if(nextIndex == currentIndex) return;
     let controlItem = nextIndex > currentIndex ? control.left : control.right;
     clearSlide(slides[currentIndex]);
@@ -27,3 +26,18 @@ document.addEventListener('click', e=>{
 });
 const clearSlide = slide => slide.classList.remove('right-to-null', 'left-to-null', 'null-to-left', 'null-to-right');
 const getNextIndex = (index, count) => index < 0 ? count-1 : index%count;
+
+
+const videoContainer =  document.querySelector('.video-block');
+const video = document.querySelector('.video-block video');
+const videoButton = document.querySelector('.video-block__play');
+videoButton.addEventListener('click', ()=>{
+  video.play();
+  video.setAttribute("controls","controls");
+  videoContainer.classList.add('playing');
+});
+video.addEventListener('ended', ()=>{
+  video.load();
+  videoContainer.classList.remove('playing');
+  video.removeAttribute("controls");
+});

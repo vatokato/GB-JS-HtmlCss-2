@@ -42,6 +42,7 @@ input[type=submit] {
   outline: none;
 }
 
+button,
 .button {
   border: 0;
   background: $primary-color;
@@ -55,6 +56,8 @@ input[type=submit] {
   font-weight: 800;
   cursor: pointer;
   transition: background-color .3s;
+  font-size: 14px;
+
   &:hover {
     background: darken($primary-color, 5%);
   }
@@ -63,4 +66,50 @@ input[type=submit] {
   }
 }
 
+
+.arrow {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  position: relative;
+  line-height: 0;
+  border-radius: 50%;
+  background: $primary-font-color;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    border: 2px solid #fff;
+    width: 6px;
+    height: 6px;
+    transform-origin: 50% 50%;
+    transform: rotate(45deg);
+    top: 50%;
+    left: 50%;
+    margin-left: -5px;
+    margin-top: -4px;
+    border-left: 0;
+    border-bottom: 0;
+  }
+
+  &--disable {
+    cursor: default;
+    opacity: .5;
+  }
+
+  &--left {
+    transform: scaleX(-1);
+  }
+
+  &--circle {
+    background: transparent;
+    border: 2px solid $primary-font-color;
+
+    &:after {
+      border-color: $primary-font-color;
+    }
+  }
+}
 

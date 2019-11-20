@@ -1,0 +1,38 @@
+.partners {
+  background: url(../img/partners-bg.jpg) no-repeat center center;
+  background-size: cover;
+
+  .container {
+    padding: 120px 0 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &-item {
+    margin: 0 40px 60px;
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      background: url(../img/logo-01.png) no-repeat;
+      width: 210px;
+      height: 127px;
+    }
+    &:nth-child(2) {
+      background: url(../img/logo-02.png) no-repeat;
+      width: 210px;
+      height: 210px;
+    }
+    &:nth-child(3) {
+      background: url(../img/logo-03.png) no-repeat;
+      width: 210px;
+      height: 130px;
+    }
+    &:nth-child(4) {
+      background: url(../img/logo-04.png) no-repeat;
+      width: 210px;
+      height: 164px;
+    }
+  }
+}

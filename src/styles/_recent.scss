@@ -1,0 +1,47 @@
+.recent {
+  padding: 60px 0;
+
+  &__text {
+    text-align: center;
+    margin: 0 auto 40px;
+    max-width: 780px;
+  }
+  &__title {
+    font-family: $font-raleway;
+    font-size: 30px;
+    color: $grey-default;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  &__desc {
+    color: $grey-light;
+    font-weight: 300;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .items-control {
+    text-align: center;
+    .arrow {
+      margin: 0 3px;
+    }
+  }
+
+  .items-list-item {
+    &__title {
+      color: $grey-default;
+    }
+    &__desc {
+      color: $grey-light;
+    }
+    &:hover {
+      .items-list-item__title {
+        color: $primary-font-color;
+      }
+      .items-list-item__desc {
+        color: #fff;
+      }
+    }
+  }
+}
