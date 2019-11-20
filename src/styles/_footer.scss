@@ -11,10 +11,6 @@
     &:active {
       color: $primary-font-color;
     }
-
-    &.tag {
-      color: #00bff3;
-    }
   }
   .accent {
     color: #959595;
@@ -63,6 +59,10 @@
 
     a {
       color: #fff;
+
+      &.tag {
+        color: #00bff3;
+      }
     }
 
     & > div {
